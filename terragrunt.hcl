@@ -22,10 +22,10 @@ remote_state {
     if_exists = "overwrite"
   }
   config = {
-    bucket  = "BUCKET_NAME"
+    bucket  = "tgatantistfstate"
     key     = "tf-state/${path_relative_to_include()}/terraform.tfstate"
-    region  = "REGION_NAME"
-    profile = "PROFILE_NAME"
+    region  = "sa-east-1"
+    profile = "default"
     encrypt = true
   }
 }
