@@ -25,7 +25,7 @@ remote_state {
     bucket  = "terragruntatlantistfstate"
     key     = "tf-state/${path_relative_to_include()}/terraform.tfstate"
     region  = "sa-east-1"
-    profile = "PROFILE_NAME"
+    profile = "default"
     encrypt = true
   }
 }
