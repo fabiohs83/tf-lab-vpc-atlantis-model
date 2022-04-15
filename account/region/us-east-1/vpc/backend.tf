@@ -4,7 +4,7 @@ terraform {
     bucket  = "terragruntatlantistfstate"
     encrypt = true
     key     = "tf-state/account/region/us-east-1/vpc/terraform.tfstate"
-    profile = "PROFILE_NAME"
+    profile = "default"
     region  = "sa-east-1"
   }
 }
