@@ -22,10 +22,10 @@ remote_state {
     if_exists = "overwrite"
   }
   config = {
-    bucket  = "BUCKET_NAME"
+    bucket  = "tf-yudi-state-2"
     key     = "tf-state/${path_relative_to_include()}/terraform.tfstate"
-    region  = "REGION_NAME"
-    profile = "PROFILE_NAME"
+    region  = "us-east-2"
+    profile = "darede-labs"
     encrypt = true
   }
 }
