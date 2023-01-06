@@ -11,7 +11,6 @@ locals {
   # environment_vars = read_terragrunt_config(find_in_parent_folders("env.hcl"))
 
   # Extract the variables we need for easy access
-  profile               = local.account_vars.locals.profile
   region                = local.region_vars.locals.region
 }
 
@@ -22,10 +21,9 @@ remote_state {
     if_exists = "overwrite"
   }
   config = {
-    bucket  = "BUCKET_NAME"
+    bucket  = "tf-state-761774289685"
     key     = "tf-state/${path_relative_to_include()}/terraform.tfstate"
-    region  = "REGION_NAME"
-    profile = "PROFILE_NAME"
+    region  = "us-east-1"
     encrypt = true
   }
 }
@@ -35,7 +33,6 @@ generate "provider" {
   if_exists = "overwrite_terragrunt"
   contents = <<EOF
 provider "aws" {
-  profile = "${local.profile}"
   region = "${local.region}"
 }
 EOF
