@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
 remote_state {
   backend = "s3"
 
